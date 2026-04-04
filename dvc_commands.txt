@@ -1,0 +1,12 @@
+dvc init → Initializes DVC in the project and creates the .dvc/ configuration folder.
+dvc add <file_or_folder> → Tracks large datasets/models with DVC instead of Git and generates a .dvc tracking file.
+dvc remote add origin <remote_url> → Connects remote storage (DagsHub, S3, GDrive, etc.) to store datasets/models.
+dvc remote default origin → Sets the default remote storage.
+dvc push → Uploads tracked datasets/models from local cache to remote storage.
+dvc pull → Downloads datasets/models from remote storage to local workspace.
+dvc checkout → Restores dataset/model versions based on the current Git commit.
+dvc status → Shows differences between workspace, cache, and remote storage.
+dvc repro → Re-runs pipeline stages automatically if dependencies change.
+dvc stage add -n <stage_name> -d <dependency> -o <output> <command> → Creates reproducible ML pipeline stages.
+dvc remove <file.dvc> → Stops tracking a dataset/model with DVC.
+dvc gc → Deletes unused cached dataset/model versions to free storage.
